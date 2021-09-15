@@ -3,18 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4133FBFC528AE651438C6033 /* Pods_zonezeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1692192950BD3A7DE1DF3E /* Pods_zonezeroTests.framework */; };
 		4EE4E35B26F0C60300B203B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E35A26F0C60300B203B8 /* AppDelegate.swift */; };
 		4EE4E35D26F0C60300B203B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E35C26F0C60300B203B8 /* SceneDelegate.swift */; };
-		4EE4E35F26F0C60300B203B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E35E26F0C60300B203B8 /* ViewController.swift */; };
 		4EE4E36226F0C60300B203B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E36026F0C60300B203B8 /* Main.storyboard */; };
 		4EE4E36426F0C60400B203B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E36326F0C60400B203B8 /* Assets.xcassets */; };
 		4EE4E36726F0C60400B203B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E36526F0C60400B203B8 /* LaunchScreen.storyboard */; };
 		4EE4E37226F0C60400B203B8 /* zonezeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E37126F0C60400B203B8 /* zonezeroTests.swift */; };
 		4EE4E37D26F0C60400B203B8 /* zonezeroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E37C26F0C60400B203B8 /* zonezeroUITests.swift */; };
+		4EE4E39326F0C70100B203B8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E39226F0C70100B203B8 /* RegisterViewController.swift */; };
+		4EE4E39526F0C72500B203B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E39426F0C72500B203B8 /* LoginViewController.swift */; };
+		4EE4E39726F0C7CF00B203B8 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E39626F0C7CF00B203B8 /* MovieListViewController.swift */; };
+		4EE4E39A26F0EC4700B203B8 /* AlertUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E39926F0EC4700B203B8 /* AlertUtility.swift */; };
+		4EE4E39E26F1452800B203B8 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E39C26F1452800B203B8 /* MovieCell.swift */; };
+		4EE4E39F26F1452800B203B8 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E39D26F1452800B203B8 /* MovieCell.xib */; };
+		4EE4E3A726F232D300B203B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */; };
+		6766789376E6AA04A55D39F6 /* Pods_zonezero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B978161CF3675FA4B8A5FCB /* Pods_zonezero.framework */; };
+		69B5E43377E699BB19A5682E /* Pods_zonezero_zonezeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696F5139C089FE204BCA9221 /* Pods_zonezero_zonezeroUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1692192950BD3A7DE1DF3E /* Pods_zonezeroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zonezeroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D096694F739D300AF1696B8 /* Pods-zonezero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zonezero.debug.xcconfig"; path = "Target Support Files/Pods-zonezero/Pods-zonezero.debug.xcconfig"; sourceTree = "<group>"; };
 		4EE4E35726F0C60300B203B8 /* zonezero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zonezero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE4E35A26F0C60300B203B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EE4E35C26F0C60300B203B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EE4E35E26F0C60300B203B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EE4E36126F0C60300B203B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EE4E36326F0C60400B203B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EE4E36626F0C60400B203B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,20 @@
 		4EE4E37826F0C60400B203B8 /* zonezeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zonezeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE4E37C26F0C60400B203B8 /* zonezeroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zonezeroUITests.swift; sourceTree = "<group>"; };
 		4EE4E37E26F0C60400B203B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE4E39226F0C70100B203B8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4EE4E39426F0C72500B203B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4EE4E39626F0C7CF00B203B8 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		4EE4E39926F0EC4700B203B8 /* AlertUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtility.swift; sourceTree = "<group>"; };
+		4EE4E39C26F1452800B203B8 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		4EE4E39D26F1452800B203B8 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5FF8CF2BC9FB001F6F7D06C2 /* Pods-zonezero-zonezeroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zonezero-zonezeroUITests.release.xcconfig"; path = "Target Support Files/Pods-zonezero-zonezeroUITests/Pods-zonezero-zonezeroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		696F5139C089FE204BCA9221 /* Pods_zonezero_zonezeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zonezero_zonezeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B978161CF3675FA4B8A5FCB /* Pods_zonezero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zonezero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E516299FE58E2DBB1290EF /* Pods-zonezero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zonezero.release.xcconfig"; path = "Target Support Files/Pods-zonezero/Pods-zonezero.release.xcconfig"; sourceTree = "<group>"; };
+		AE58CECA87F8A973CC1A963F /* Pods-zonezeroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zonezeroTests.debug.xcconfig"; path = "Target Support Files/Pods-zonezeroTests/Pods-zonezeroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4493DBFCF03ACF74B914F43 /* Pods-zonezero-zonezeroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zonezero-zonezeroUITests.debug.xcconfig"; path = "Target Support Files/Pods-zonezero-zonezeroUITests/Pods-zonezero-zonezeroUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1CEFDBEEF5C545595867402 /* Pods-zonezeroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zonezeroTests.release.xcconfig"; path = "Target Support Files/Pods-zonezeroTests/Pods-zonezeroTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6766789376E6AA04A55D39F6 /* Pods_zonezero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4133FBFC528AE651438C6033 /* Pods_zonezeroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B5E43377E699BB19A5682E /* Pods_zonezero_zonezeroUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E7A462CFB34B3625612D19C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B978161CF3675FA4B8A5FCB /* Pods_zonezero.framework */,
+				696F5139C089FE204BCA9221 /* Pods_zonezero_zonezeroUITests.framework */,
+				0B1692192950BD3A7DE1DF3E /* Pods_zonezeroTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4EE4E34E26F0C60300B203B8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +120,8 @@
 				4EE4E37026F0C60400B203B8 /* zonezeroTests */,
 				4EE4E37B26F0C60400B203B8 /* zonezeroUITests */,
 				4EE4E35826F0C60300B203B8 /* Products */,
+				8C2AD3787CEFDBE5925D220E /* Pods */,
+				2E7A462CFB34B3625612D19C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +138,18 @@
 		4EE4E35926F0C60300B203B8 /* zonezero */ = {
 			isa = PBXGroup;
 			children = (
+				4EE4E39826F0EC2300B203B8 /* helpers */,
+				4EE4E38C26F0C63C00B203B8 /* Model */,
+				4EE4E38D26F0C64800B203B8 /* Controller */,
+				4EE4E38B26F0C62F00B203B8 /* View */,
+				4EE4E38A26F0C61100B203B8 /* ViewModel */,
 				4EE4E35A26F0C60300B203B8 /* AppDelegate.swift */,
 				4EE4E35C26F0C60300B203B8 /* SceneDelegate.swift */,
-				4EE4E35E26F0C60300B203B8 /* ViewController.swift */,
 				4EE4E36026F0C60300B203B8 /* Main.storyboard */,
 				4EE4E36326F0C60400B203B8 /* Assets.xcassets */,
 				4EE4E36526F0C60400B203B8 /* LaunchScreen.storyboard */,
 				4EE4E36826F0C60400B203B8 /* Info.plist */,
+				4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */,
 			);
 			path = zonezero;
 			sourceTree = "<group>";
@@ -128,6 +172,68 @@
 			path = zonezeroUITests;
 			sourceTree = "<group>";
 		};
+		4EE4E38A26F0C61100B203B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4EE4E38B26F0C62F00B203B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4E39B26F1450300B203B8 /* cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EE4E38C26F0C63C00B203B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EE4E38D26F0C64800B203B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4E39226F0C70100B203B8 /* RegisterViewController.swift */,
+				4EE4E39426F0C72500B203B8 /* LoginViewController.swift */,
+				4EE4E39626F0C7CF00B203B8 /* MovieListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4EE4E39826F0EC2300B203B8 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4E39926F0EC4700B203B8 /* AlertUtility.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		4EE4E39B26F1450300B203B8 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4E39C26F1452800B203B8 /* MovieCell.swift */,
+				4EE4E39D26F1452800B203B8 /* MovieCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		8C2AD3787CEFDBE5925D220E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D096694F739D300AF1696B8 /* Pods-zonezero.debug.xcconfig */,
+				97E516299FE58E2DBB1290EF /* Pods-zonezero.release.xcconfig */,
+				D4493DBFCF03ACF74B914F43 /* Pods-zonezero-zonezeroUITests.debug.xcconfig */,
+				5FF8CF2BC9FB001F6F7D06C2 /* Pods-zonezero-zonezeroUITests.release.xcconfig */,
+				AE58CECA87F8A973CC1A963F /* Pods-zonezeroTests.debug.xcconfig */,
+				E1CEFDBEEF5C545595867402 /* Pods-zonezeroTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EE4E38126F0C60400B203B8 /* Build configuration list for PBXNativeTarget "zonezero" */;
 			buildPhases = (
+				609EF1905E67C850D39B23F3 /* [CP] Check Pods Manifest.lock */,
 				4EE4E35326F0C60300B203B8 /* Sources */,
 				4EE4E35426F0C60300B203B8 /* Frameworks */,
 				4EE4E35526F0C60300B203B8 /* Resources */,
+				DFB5080AF4E79356F8836035 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EE4E38426F0C60400B203B8 /* Build configuration list for PBXNativeTarget "zonezeroTests" */;
 			buildPhases = (
+				6AF7CAEC3BA8B18D44836971 /* [CP] Check Pods Manifest.lock */,
 				4EE4E36926F0C60400B203B8 /* Sources */,
 				4EE4E36A26F0C60400B203B8 /* Frameworks */,
 				4EE4E36B26F0C60400B203B8 /* Resources */,
@@ -170,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EE4E38726F0C60400B203B8 /* Build configuration list for PBXNativeTarget "zonezeroUITests" */;
 			buildPhases = (
+				464925EB564D38A4CE35F8F8 /* [CP] Check Pods Manifest.lock */,
 				4EE4E37426F0C60400B203B8 /* Sources */,
 				4EE4E37526F0C60400B203B8 /* Frameworks */,
 				4EE4E37626F0C60400B203B8 /* Resources */,
+				25FCD0B095DEAF4C49F0DE7E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +344,8 @@
 			files = (
 				4EE4E36726F0C60400B203B8 /* LaunchScreen.storyboard in Resources */,
 				4EE4E36426F0C60400B203B8 /* Assets.xcassets in Resources */,
+				4EE4E3A726F232D300B203B8 /* GoogleService-Info.plist in Resources */,
+				4EE4E39F26F1452800B203B8 /* MovieCell.xib in Resources */,
 				4EE4E36226F0C60300B203B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,13 +366,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25FCD0B095DEAF4C49F0DE7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zonezero-zonezeroUITests/Pods-zonezero-zonezeroUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zonezero-zonezeroUITests/Pods-zonezero-zonezeroUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zonezero-zonezeroUITests/Pods-zonezero-zonezeroUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		464925EB564D38A4CE35F8F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zonezero-zonezeroUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		609EF1905E67C850D39B23F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zonezero-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AF7CAEC3BA8B18D44836971 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zonezeroTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB5080AF4E79356F8836035 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zonezero/Pods-zonezero-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zonezero/Pods-zonezero-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zonezero/Pods-zonezero-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EE4E35326F0C60300B203B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE4E35F26F0C60300B203B8 /* ViewController.swift in Sources */,
+				4EE4E39E26F1452800B203B8 /* MovieCell.swift in Sources */,
+				4EE4E39326F0C70100B203B8 /* RegisterViewController.swift in Sources */,
+				4EE4E39A26F0EC4700B203B8 /* AlertUtility.swift in Sources */,
+				4EE4E39726F0C7CF00B203B8 /* MovieListViewController.swift in Sources */,
 				4EE4E35B26F0C60300B203B8 /* AppDelegate.swift in Sources */,
+				4EE4E39526F0C72500B203B8 /* LoginViewController.swift in Sources */,
 				4EE4E35D26F0C60300B203B8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +653,7 @@
 		};
 		4EE4E38226F0C60400B203B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D096694F739D300AF1696B8 /* Pods-zonezero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +673,7 @@
 		};
 		4EE4E38326F0C60400B203B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E516299FE58E2DBB1290EF /* Pods-zonezero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +693,7 @@
 		};
 		4EE4E38526F0C60400B203B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE58CECA87F8A973CC1A963F /* Pods-zonezeroTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +716,7 @@
 		};
 		4EE4E38626F0C60400B203B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1CEFDBEEF5C545595867402 /* Pods-zonezeroTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +739,7 @@
 		};
 		4EE4E38826F0C60400B203B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4493DBFCF03ACF74B914F43 /* Pods-zonezero-zonezeroUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +760,7 @@
 		};
 		4EE4E38926F0C60400B203B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF8CF2BC9FB001F6F7D06C2 /* Pods-zonezero-zonezeroUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
