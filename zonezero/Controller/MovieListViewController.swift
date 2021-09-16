@@ -10,6 +10,8 @@ import UIKit
 class MovieListViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
+  let movie = Movie()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,12 +35,16 @@ extension MovieListViewController: UITableViewDelegate,UITableViewDataSource {
   
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell")!
-       return cell
+  if let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell {
+    cell.movieTitle.text = movie.movieArrayList[indexPath.row]
+         return cell
+    }
+    return UITableViewCell()
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    AlertUtility.present(title: "", message: "", delegate: self)
+    var movieTitle = movie.movieArrayList[indexPath.row]
+    AlertUtility.present(title: "Movie Title", message: "\(movieTitle)", delegate: self)
   }
   
   

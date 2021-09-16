@@ -8,30 +8,69 @@
 import UIKit
 import Firebase
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var reTypePasswordTextField: UITextField!
+  @IBOutlet weak var registerButton: UIButton!
   
-  var name = ""
-  var email = ""
-  var password = ""
-  var reTypePassword = ""
+  @IBOutlet weak var bttnBC: NSLayoutConstraint!
   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+      delegates()
+      NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
+                                                     name: UIResponder.keyboardWillShowNotification, object: nil)
+      NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
+                                             name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+  override func viewDidLayoutSubviews() {
+    registerButton.layer.cornerRadius = 15
+    registerButton.layer.masksToBounds = true
+  }
+  func delegates() {
+    nameTextField.delegate = self
+    emailTextField.delegate = self
+    passwordTextField.delegate = self
+    reTypePasswordTextField.delegate = self
+  }
+  //MARK: - Register button appearance
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  @objc func keyboardWillShow(notification:Notification) {
+    if let userInfo = notification.userInfo as? Dictionary <String, AnyObject> {
+      let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
+      let keyboardRect = frame?.cgRectValue
+      if let keyboardHeight = keyboardRect?.height {
+        self.bttnBC.constant
+          = keyboardHeight
+        UIView.animate(withDuration: 0.5, animations: {self.view.layoutIfNeeded()
+          
+        })
+      }
+     
       
     }
+    
+  }
+  @objc func keyboardWillHide(notification: Notification) {
+    self.bttnBC.constant = 60.0
+    UIView.animate(withDuration: 0.5, animations: {self.view.layoutIfNeeded()
+      
+    })
+  }
+ 
     
   @IBAction func registerTapped(_ sender: Any) {
     
     passwordTextField.resignFirstResponder()
     nameTextField.resignFirstResponder()
-    
+    //MARK: - Text Controls
     guard let name = nameTextField.text, !name.isEmpty,
           let email = emailTextField.text, !email.isEmpty,
           let password = passwordTextField.text, !password.isEmpty,
@@ -49,8 +88,8 @@ class RegisterViewController: UIViewController {
       AlertUtility.present(title: "ERROR!", message: "The Password is not the same as the ReType Password!", buttonTitle: "OK", handler: nil, delegate: self)
       return
     }
-    //create user
-    Auth.auth().createUser(withEmail: email, password: email) { authdata, error in
+    //MARK: - Create user
+    Auth.auth().createUser(withEmail: email, password: password) { authdata, error in
       if error != nil {
         AlertUtility.present(title: "Error", message: error?.localizedDescription ?? "User could not be created", delegate: self)
       } else {
@@ -59,42 +98,7 @@ class RegisterViewController: UIViewController {
     }
     
 
-//    name = nameTextField.text ?? ""
-//    email = emailTextField.text ?? ""
-//    password = passwordTextField.text ?? ""
-//    reTypePassword = reTypePasswordTextField.text ?? ""
-//
-//    let nameCaracterCount = name.count
-//    let emailCaracterCount = emailTextField.text?.count
-//    let passwordCaracterCount = passwordTextField.text?.count
-//    let reTypePasswordCaracterCount = reTypePasswordTextField.text?.count
-//
-//    if name != "" && email != "" && password != "" && reTypePassword != "" {
-//
-//      if name.count > 2 && email.count > 2 && password.count > 2 && reTypePassword.count > 2 {
-//        if password == reTypePassword {
-//          //segue
-//          print("segue")
-//        } else {
-//          AlertUtility.present(title: "Error!", message: "password not equaly reType", buttonTitle: "OK", buttonTitle1: "CANCEL", handler: nil,handler1: { UIAlertAction in
-//            self.passwordTextField.text = ""
-//            self.reTypePasswordTextField.text = ""
-//          }, delegate: self)
-//          print("password not equaly reType")
-//        }
-//
-//
-//      } else {
-//        // count alert
-////        AlertUtility.present(title: <#T##String#>, message: <#T##String#>, buttonTitle: <#T##String#>, buttonTitle1: <#T##String#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>, handler1: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>, delegate: <#T##UIViewController#>)
-////        print("count alert")
-//      }
-//
-//    } else {
-//      //alert
-//      print("alert empty")
-//
-//    }
+
   }
   
 }
