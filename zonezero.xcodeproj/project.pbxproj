@@ -140,17 +140,11 @@
 		4EE4E35926F0C60300B203B8 /* zonezero */ = {
 			isa = PBXGroup;
 			children = (
+				4EE4E3B626F4D48D00B203B8 /* Resources */,
 				4EE4E39826F0EC2300B203B8 /* helpers */,
 				4EE4E38C26F0C63C00B203B8 /* Model */,
 				4EE4E38D26F0C64800B203B8 /* Controller */,
 				4EE4E38B26F0C62F00B203B8 /* View */,
-				4EE4E35A26F0C60300B203B8 /* AppDelegate.swift */,
-				4EE4E35C26F0C60300B203B8 /* SceneDelegate.swift */,
-				4EE4E36026F0C60300B203B8 /* Main.storyboard */,
-				4EE4E36326F0C60400B203B8 /* Assets.xcassets */,
-				4EE4E36526F0C60400B203B8 /* LaunchScreen.storyboard */,
-				4EE4E36826F0C60400B203B8 /* Info.plist */,
-				4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */,
 			);
 			path = zonezero;
 			sourceTree = "<group>";
@@ -176,6 +170,8 @@
 		4EE4E38B26F0C62F00B203B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4EE4E3B726F4D4B200B203B8 /* Storyboards */,
+				4EE4E36326F0C60400B203B8 /* Assets.xcassets */,
 				4EE4E39B26F1450300B203B8 /* cell */,
 			);
 			path = View;
@@ -214,6 +210,26 @@
 				4EE4E39D26F1452800B203B8 /* MovieCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		4EE4E3B626F4D48D00B203B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4E36826F0C60400B203B8 /* Info.plist */,
+				4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */,
+				4EE4E35A26F0C60300B203B8 /* AppDelegate.swift */,
+				4EE4E35C26F0C60300B203B8 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4EE4E3B726F4D4B200B203B8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4E36026F0C60300B203B8 /* Main.storyboard */,
+				4EE4E36526F0C60400B203B8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		8C2AD3787CEFDBE5925D220E /* Pods */ = {
