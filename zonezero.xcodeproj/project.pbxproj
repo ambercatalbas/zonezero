@@ -23,6 +23,7 @@
 		4EE4E39F26F1452800B203B8 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E39D26F1452800B203B8 /* MovieCell.xib */; };
 		4EE4E3A726F232D300B203B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */; };
 		4EE4E3AF26F3DECE00B203B8 /* Movielist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E3AE26F3DECE00B203B8 /* Movielist.swift */; };
+		4EE4E3B926F5166400B203B8 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E3B826F5166400B203B8 /* Extensions+UIViewController.swift */; };
 		6766789376E6AA04A55D39F6 /* Pods_zonezero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B978161CF3675FA4B8A5FCB /* Pods_zonezero.framework */; };
 		69B5E43377E699BB19A5682E /* Pods_zonezero_zonezeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696F5139C089FE204BCA9221 /* Pods_zonezero_zonezeroUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		4EE4E39D26F1452800B203B8 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EE4E3AE26F3DECE00B203B8 /* Movielist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movielist.swift; sourceTree = "<group>"; };
+		4EE4E3B826F5166400B203B8 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		5FF8CF2BC9FB001F6F7D06C2 /* Pods-zonezero-zonezeroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zonezero-zonezeroUITests.release.xcconfig"; path = "Target Support Files/Pods-zonezero-zonezeroUITests/Pods-zonezero-zonezeroUITests.release.xcconfig"; sourceTree = "<group>"; };
 		696F5139C089FE204BCA9221 /* Pods_zonezero_zonezeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zonezero_zonezeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B978161CF3675FA4B8A5FCB /* Pods_zonezero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zonezero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				4EE4E39926F0EC4700B203B8 /* AlertUtility.swift */,
+				4EE4E3B826F5166400B203B8 /* Extensions+UIViewController.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE4E3B926F5166400B203B8 /* Extensions+UIViewController.swift in Sources */,
 				4EE4E39E26F1452800B203B8 /* MovieCell.swift in Sources */,
 				4EE4E39326F0C70100B203B8 /* RegisterViewController.swift in Sources */,
 				4EE4E39A26F0EC4700B203B8 /* AlertUtility.swift in Sources */,
@@ -671,7 +675,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68W3SBSH6G;
-				INFOPLIST_FILE = zonezero/Info.plist;
+				INFOPLIST_FILE = zonezero/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,7 +695,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68W3SBSH6G;
-				INFOPLIST_FILE = zonezero/Info.plist;
+				INFOPLIST_FILE = zonezero/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

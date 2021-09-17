@@ -39,6 +39,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     checkBox2.isHidden = true
     promotionalLabel.isHidden = true
+    self.navigationItem.title = "Log In"
+    
+    hideKeyboard()
   }
   override func viewDidLayoutSubviews() {
     loginButton.layer.cornerRadius = 15
@@ -134,10 +137,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
       } else {
-        // other method self.performSegue(withIdentifier: "toMovieListViewController", sender: nil)
-        let story = UIStoryboard(name: "Main", bundle:nil)
-        let vc = story.instantiateViewController(withIdentifier: "MovieListViewController") as! MovieListViewController
-        UIApplication.shared.windows.first?.rootViewController = vc
+        
+        // self.performSegue(withIdentifier: "toMovieListViewController", sender: nil)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MovieListViewController") as? MovieListViewController
+        self.navigationController?.pushViewController(controller!, animated: true)
+
       }
     }
   }

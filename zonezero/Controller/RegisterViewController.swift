@@ -26,17 +26,22 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                                            name: UIResponder.keyboardWillShowNotification, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
                                            name: UIResponder.keyboardWillHideNotification, object: nil)
+    self.navigationItem.title = "Register"
+    hideKeyboard()
   }
+  
   override func viewDidLayoutSubviews() {
     registerButton.layer.cornerRadius = 15
     registerButton.layer.masksToBounds = true
   }
+  
   func delegates() {
     nameTextField.delegate = self
     emailTextField.delegate = self
     passwordTextField.delegate = self
     reTypePasswordTextField.delegate = self
   }
+  
   //MARK: - Register button appearance
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
@@ -53,8 +58,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
           
         })
       }
-      
-      
     }
     
   }
@@ -94,15 +97,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         AlertUtility.present(title: "Error", message: error?.localizedDescription ?? "User could not be created", delegate: self)
       } else {
         
-        let story = UIStoryboard(name: "Main", bundle:nil)
-        let vc = story.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        UIApplication.shared.windows.first?.rootViewController = vc
-        // other mthod  self.performSegue(withIdentifier: "fromRegisterVCtoLoginVC", sender: nil)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        self.navigationController?.pushViewController(controller!, animated: true)
+        //  self.performSegue(withIdentifier: "fromRegisterVCtoLoginVC", sender: nil)
       }
     }
-    
-    
-    
   }
   
 }
