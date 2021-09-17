@@ -1,0 +1,6 @@
+framework module Pods_zonezero {
+  umbrella header "Pods-zonezero-umbrella.h"
+
+  export *
+  module * { export * }
+}
