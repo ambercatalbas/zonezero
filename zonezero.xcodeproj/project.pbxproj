@@ -22,7 +22,6 @@
 		4EE4E39E26F1452800B203B8 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E39C26F1452800B203B8 /* MovieCell.swift */; };
 		4EE4E39F26F1452800B203B8 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E39D26F1452800B203B8 /* MovieCell.xib */; };
 		4EE4E3A726F232D300B203B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */; };
-		4EE4E3AD26F3D43900B203B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E3AC26F3D43900B203B8 /* ViewController.swift */; };
 		4EE4E3AF26F3DECE00B203B8 /* Movielist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E3AE26F3DECE00B203B8 /* Movielist.swift */; };
 		6766789376E6AA04A55D39F6 /* Pods_zonezero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B978161CF3675FA4B8A5FCB /* Pods_zonezero.framework */; };
 		69B5E43377E699BB19A5682E /* Pods_zonezero_zonezeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696F5139C089FE204BCA9221 /* Pods_zonezero_zonezeroUITests.framework */; };
@@ -68,7 +67,6 @@
 		4EE4E39C26F1452800B203B8 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		4EE4E39D26F1452800B203B8 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		4EE4E3A626F232D300B203B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4EE4E3AC26F3D43900B203B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EE4E3AE26F3DECE00B203B8 /* Movielist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movielist.swift; sourceTree = "<group>"; };
 		5FF8CF2BC9FB001F6F7D06C2 /* Pods-zonezero-zonezeroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zonezero-zonezeroUITests.release.xcconfig"; path = "Target Support Files/Pods-zonezero-zonezeroUITests/Pods-zonezero-zonezeroUITests.release.xcconfig"; sourceTree = "<group>"; };
 		696F5139C089FE204BCA9221 /* Pods_zonezero_zonezeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zonezero_zonezeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +144,6 @@
 				4EE4E38C26F0C63C00B203B8 /* Model */,
 				4EE4E38D26F0C64800B203B8 /* Controller */,
 				4EE4E38B26F0C62F00B203B8 /* View */,
-				4EE4E38A26F0C61100B203B8 /* ViewModel */,
 				4EE4E35A26F0C60300B203B8 /* AppDelegate.swift */,
 				4EE4E35C26F0C60300B203B8 /* SceneDelegate.swift */,
 				4EE4E36026F0C60300B203B8 /* Main.storyboard */,
@@ -176,13 +173,6 @@
 			path = zonezeroUITests;
 			sourceTree = "<group>";
 		};
-		4EE4E38A26F0C61100B203B8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		4EE4E38B26F0C62F00B203B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +184,7 @@
 		4EE4E38C26F0C63C00B203B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4EE4E3AE26F3DECE00B203B8 /* Movielist.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,7 +195,6 @@
 				4EE4E39226F0C70100B203B8 /* RegisterViewController.swift */,
 				4EE4E39426F0C72500B203B8 /* LoginViewController.swift */,
 				4EE4E39626F0C7CF00B203B8 /* MovieListViewController.swift */,
-				4EE4E3AC26F3D43900B203B8 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				4EE4E39926F0EC4700B203B8 /* AlertUtility.swift */,
-				4EE4E3AE26F3DECE00B203B8 /* Movielist.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -487,7 +476,6 @@
 				4EE4E39726F0C7CF00B203B8 /* MovieListViewController.swift in Sources */,
 				4EE4E35B26F0C60300B203B8 /* AppDelegate.swift in Sources */,
 				4EE4E39526F0C72500B203B8 /* LoginViewController.swift in Sources */,
-				4EE4E3AD26F3D43900B203B8 /* ViewController.swift in Sources */,
 				4EE4E35D26F0C60300B203B8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

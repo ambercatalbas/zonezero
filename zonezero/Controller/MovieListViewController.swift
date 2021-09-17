@@ -12,18 +12,14 @@ class MovieListViewController: UIViewController {
   
   let movie = Movie()
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-      tableView.delegate = self
-      tableView.dataSource = self
-      tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
-
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-
-  
-
+    tableView.delegate = self
+    tableView.dataSource = self
+    tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
+    
+  }
 }
 
 extension MovieListViewController: UITableViewDelegate,UITableViewDataSource {
@@ -35,9 +31,9 @@ extension MovieListViewController: UITableViewDelegate,UITableViewDataSource {
   
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-  if let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell {
-    cell.movieTitle.text = movie.movieArrayList[indexPath.row]
-         return cell
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell {
+      cell.movieTitle.text = movie.movieArrayList[indexPath.row]
+      return cell
     }
     return UITableViewCell()
   }

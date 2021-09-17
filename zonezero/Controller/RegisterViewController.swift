@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
-
+  
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
@@ -18,15 +18,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var bttnBC: NSLayoutConstraint!
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-      delegates()
-      NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
-                                                     name: UIResponder.keyboardWillShowNotification, object: nil)
-      NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
-                                             name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    delegates()
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
+                                           name: UIResponder.keyboardWillShowNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
+                                           name: UIResponder.keyboardWillHideNotification, object: nil)
+  }
   override func viewDidLayoutSubviews() {
     registerButton.layer.cornerRadius = 15
     registerButton.layer.masksToBounds = true
@@ -53,7 +53,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
           
         })
       }
-     
+      
       
     }
     
@@ -64,8 +64,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
       
     })
   }
- 
-    
+  
+  
   @IBAction func registerTapped(_ sender: Any) {
     
     passwordTextField.resignFirstResponder()
@@ -76,8 +76,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
           let password = passwordTextField.text, !password.isEmpty,
           let reTypePassword = reTypePasswordTextField.text, !reTypePassword.isEmpty else {
       AlertUtility.present(title: "ERROR", message: "Fill in the blanks!", buttonTitle: "OK", handler: nil, delegate: self)
-               
-        return
+      
+      return
     }
     guard name.count >= 3, email.count >= 3, password.count >= 3, reTypePassword.count >= 3 else {
       AlertUtility.present(title: "ERROR!", message: "Must be at least 3 characters", buttonTitle: "OK", handler: nil, delegate: self)
@@ -93,12 +93,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
       if error != nil {
         AlertUtility.present(title: "Error", message: error?.localizedDescription ?? "User could not be created", delegate: self)
       } else {
-        self.performSegue(withIdentifier: "fromRegisterVCtoLoginVC", sender: nil)
+        
+        let story = UIStoryboard(name: "Main", bundle:nil)
+        let vc = story.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        UIApplication.shared.windows.first?.rootViewController = vc
+        // other mthod  self.performSegue(withIdentifier: "fromRegisterVCtoLoginVC", sender: nil)
       }
     }
     
-
-
+    
+    
   }
   
 }

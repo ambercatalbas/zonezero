@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-
+  
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var checkBox1: UIButton!
@@ -25,13 +25,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
   
   
   override func viewDidLoad() {
-        super.viewDidLoad()
-
+    super.viewDidLoad()
+    
     checkBox1.setBackgroundImage(UIImage(named: "blank-check-box"), for: .normal)
     checkBox2.setBackgroundImage(UIImage(named: "blank-check-box"), for: .normal)
     
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
-                                                   name: UIResponder.keyboardWillShowNotification, object: nil)
+                                           name: UIResponder.keyboardWillShowNotification, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
                                            name: UIResponder.keyboardWillHideNotification, object: nil)
     emailTextField.delegate = self
@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     checkBox2.isHidden = true
     promotionalLabel.isHidden = true
-    }
+  }
   override func viewDidLayoutSubviews() {
     loginButton.layer.cornerRadius = 15
     loginButton.layer.masksToBounds = true
@@ -69,7 +69,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       
     })
   }
-    
+  
   @IBAction func checkButton1Tapped(_ sender: UIButton) {
     if flag1 == false {
       
@@ -81,7 +81,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       sender.setBackgroundImage(UIImage(named: "blank-check-box"), for: .normal)
       flag1 = false
     }
-  
+    
   }
   @IBAction func checkButton2Tapped(_ sender: UIButton) {
     if flag2 == false {
@@ -92,7 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       sender.setBackgroundImage(UIImage(named: "blank-check-box"), for: .normal)
       flag2 = false
     }
-  
+    
   }
   
   @IBAction func loginButtonTapped(_ sender: Any) {
@@ -100,44 +100,47 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     guard let email = emailTextField.text, !email.isEmpty,
           let password = passwordTextField.text, !password.isEmpty else {
       AlertUtility.present(title: "ERROR", message: "Fill in the blanks!", buttonTitle: "OK", handler: nil, delegate: self)
-               
-        return
+      
+      return
     }
     //MARK: - SignIn, Handlings Error
     
     Auth.auth().signIn(withEmail: email,
                        password: password) { (authdata, error) in
-        if error != nil {
+      if error != nil {
+        
+        if let errCode = AuthErrorCode(rawValue: error!._code) {
           
-          if let errCode = AuthErrorCode(rawValue: error!._code) {
-
-                              switch errCode {
-                              case .wrongPassword:
-                                      print("wrong password")
-                                AlertUtility.multiButton(title: "ERROR!", message: error?.localizedDescription ?? "wrong password/email", buttonTitle: "Cancel", buttonTitle1: "Retry", handler: nil, handler1: { UIAlertAction in
-                                
-                                            self.passwordTextField.text = ""
-                                          }, delegate: self)
-                              case .userNotFound:
-                                AlertUtility.multiButton(title: "ERROR!", message: error?.localizedDescription ?? "wrong password/email", buttonTitle: "Cancel", buttonTitle1: "Retry", handler: nil, handler1: { UIAlertAction in
-                                  self.emailTextField.text = ""
-                                          }, delegate: self)
-                                      print(" user")
-                              case .invalidEmail:
-                                AlertUtility.multiButton(title: "ERROR!", message: error?.localizedDescription ?? "wrong password/email", buttonTitle: "Cancel", buttonTitle1: "Retry", handler: nil, handler1: { UIAlertAction in
-                                            self.emailTextField.text = ""
-                                          }, delegate: self)
-                              print("invalid email")
-                                  default:
-                                      print("other error")
-                              }
-                          }
-
-                      } else {
-           self.performSegue(withIdentifier: "toMovieListViewController", sender: nil)
-       }
+          switch errCode {
+          case .wrongPassword:
+            print("wrong password")
+            AlertUtility.multiButton(title: "ERROR!", message: error?.localizedDescription ?? "wrong password/email", buttonTitle: "Cancel", buttonTitle1: "Retry", handler: nil, handler1: { UIAlertAction in
+              
+              self.passwordTextField.text = ""
+            }, delegate: self)
+          case .userNotFound:
+            AlertUtility.multiButton(title: "ERROR!", message: error?.localizedDescription ?? "wrong password/email", buttonTitle: "Cancel", buttonTitle1: "Retry", handler: nil, handler1: { UIAlertAction in
+              self.emailTextField.text = ""
+            }, delegate: self)
+            print(" user")
+          case .invalidEmail:
+            AlertUtility.multiButton(title: "ERROR!", message: error?.localizedDescription ?? "wrong password/email", buttonTitle: "Cancel", buttonTitle1: "Retry", handler: nil, handler1: { UIAlertAction in
+              self.emailTextField.text = ""
+            }, delegate: self)
+            print("invalid email")
+          default:
+            print("other error")
+          }
+        }
+        
+      } else {
+        // other method self.performSegue(withIdentifier: "toMovieListViewController", sender: nil)
+        let story = UIStoryboard(name: "Main", bundle:nil)
+        let vc = story.instantiateViewController(withIdentifier: "MovieListViewController") as! MovieListViewController
+        UIApplication.shared.windows.first?.rootViewController = vc
+      }
     }
-}
+  }
 }
 
 
