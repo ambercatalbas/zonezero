@@ -22,7 +22,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 ### Since the button is not visible, I changed the button constraint using notification center.
 
-## loginViewController
+## LoginViewController
 ---------
 ## I made firebase signIn,
 
@@ -59,9 +59,9 @@ Auth.auth().signIn(withEmail: email,
 ## Both can be used to switch between controllers.
 ```swift
 // other method self.performSegue(withIdentifier: "toMovieListViewController", sender: nil)
-        let story = UIStoryboard(name: "Main", bundle:nil)
-        let vc = story.instantiateViewController(withIdentifier: "MovieListViewController") as! MovieListViewController
-        UIApplication.shared.windows.first?.rootViewController = vc
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        self.navigationController?.pushViewController(controller!, animated: true)
+        
  ```
 ## MovielistViewController
 ---------
